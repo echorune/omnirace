@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-abyss: #030B12;
+    --color-cyan: #00F5D4;
+    --color-coral: #FF5E7E;
+    --color-sand: #FFD166;
+  }
+
+  body {
+    background-color: #030B12;
+    color: #e2e8f0;
+    font-family: 'Inter', system-ui, sans-serif;
+    user-select: none;
+    overflow: hidden;
+  }
+}
+
+/* Custom scrollbars for telemetry dashboards */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(3, 11, 18, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 245, 212, 0.25);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 245, 212, 0.5);
+}
+
+/* Glassmorphism panel style */
+.tropic-glass {
+  background: rgba(6, 21, 34, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 245, 212, 0.15);
+}
+
+.tropic-glass-hover:hover {
+  background: rgba(10, 32, 48, 0.85);
+  border-color: rgba(0, 245, 212, 0.35);
+  box-shadow: 0 0 15px -3px rgba(0, 245, 212, 0.2);
+}
+
+.tropic-glass-active {
+  background: rgba(15, 44, 66, 0.9);
+  border-color: rgba(0, 245, 212, 0.5);
+  box-shadow: 0 0 20px -2px rgba(0, 245, 212, 0.25);
+}
+
+/* Neon text & border glows */
+.glow-cyan {
+  text-shadow: 0 0 8px rgba(0, 245, 212, 0.6);
+}
+
+.glow-coral {
+  text-shadow: 0 0 8px rgba(255, 94, 126, 0.6);
+}
+
+.glow-sand {
+  text-shadow: 0 0 8px rgba(255, 209, 102, 0.6);
+}
+
+/* Subtle grid background for marine telemetry */
+.marine-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 245, 212, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 245, 212, 0.03) 1px, transparent 1px);
+}
